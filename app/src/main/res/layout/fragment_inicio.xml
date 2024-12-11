@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    tools:context=".InicioFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <!-- Text View for Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APP PUNTA HERMOSA"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Label for Combo Box -->
+     <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccione una opción:"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Material Spinner -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/spinnerInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@color/white"
+                android:hint="Seleccione una opción"
+                android:inputType="none" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Multiline Text for Description -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/descriptionInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:hint="Ingrese una descripción"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Image Section -->
+        <ImageView
+            android:id="@+id/placeholderImage"
+            android:layout_width="390dp"
+            android:layout_height="290dp"
+            android:src="@drawable/bottom"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="16dp"
+    android:gravity="center"
+    tools:context=".LoginActivity"
+    android:background="@color/fondo">
+
+    <!-- Logo -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:src="@drawable/fondosihuas"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:transitionName="logoImageTrans" />
+
+    <!-- Bienvenida -->
+    <TextView
+        android:id="@+id/bienvenidoLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/abel"
+        android:text="Bienvenido a la App de Seguridad!"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center" />
+
+    <!-- Subtítulo -->
+    <TextView
+        android:id="@+id/continuarLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/abel"
+        android:textColor="@color/white"
+        android:text="Inicia sesión para continuar"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <!-- Campo de Email -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="12dp"
+        android:hint="Email"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:id="@+id/txtEmail"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fontFamily="@font/abel" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Campo de Contraseña -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+
+        android:hint="Contraseña"
+        app:passwordToggleEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:id="@+id/txtPassword"
+            android:fontFamily="@font/abel"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Olvidaste tu Contraseña -->
+    <TextView
+        android:id="@+id/olvidasteContra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="24dp"
+        android:text="¿Olvidaste tu Contraseña?"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold|italic"
+        android:fontFamily="@font/abel"
+        android:textAlignment="viewEnd"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <!-- Botón de Inicio de Sesión -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btninicioSesion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="INICIAR SESIÓN"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#CB2C1C"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:cornerRadius="12dp" />
+
+    <!-- Registrarse -->
+    <TextView
+        android:id="@+id/nuevoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="¿Eres nuevo? ¡Regístrate!"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/abel"
+        android:clickable="true"
+        android:focusable="true" />
+
+</LinearLayout>
